@@ -1,4 +1,4 @@
-HELPERS       = "helpers"
+HELPERS       = "/helpers"
 HOLDER        = "holder"
 JQUERY        = "jquery"
 BOOTSTRAP     = "bootstrap"

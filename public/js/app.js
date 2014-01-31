@@ -1,7 +1,7 @@
 (function() {
   var BOOTSTRAP, DRAG, HELPERS, HOLDER, JQUERY, LIBRARIES, USER_JOURNEYS;
 
-  HELPERS = "helpers";
+  HELPERS = "/helpers";
 
   HOLDER = "holder";
 
