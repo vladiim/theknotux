@@ -1,23 +1,23 @@
-HELPERS       = "/helpers"
 HOLDER        = "holder"
 JQUERY        = "jquery"
 BOOTSTRAP     = "bootstrap"
 DRAG          = "dragable"
 USER_JOURNEYS = "user_journeys"
 
-LIBRARIES = [ JQUERY, BOOTSTRAP, "#{ HELPERS }/#{ HOLDER }",
-              USER_JOURNEYS, DRAG]
+LIBRARIES = [ JQUERY, BOOTSTRAP, HOLDER, USER_JOURNEYS, DRAG]
 
 require.config
   paths:
-    "jquery": "#{ HELPERS }/#{ JQUERY }"
-    "bootstrap": "#{ HELPERS }/#{ BOOTSTRAP }"
+    "jquery": JQUERY
+    "bootstrap": BOOTSTRAP
 
   shim:
   	"bootstrap":
       deps: [JQUERY]
 
 require LIBRARIES, ( $ ) ->
+  jQuery = $
+
   contentIconGenerator = (icon, title) ->
     views = $(".title_content_icon > .glyphicon-#{icon}")
     value = views.data('value')

@@ -1,7 +1,5 @@
 (function() {
-  var BOOTSTRAP, DRAG, HELPERS, HOLDER, JQUERY, LIBRARIES, USER_JOURNEYS;
-
-  HELPERS = "/helpers";
+  var BOOTSTRAP, DRAG, HOLDER, JQUERY, LIBRARIES, USER_JOURNEYS;
 
   HOLDER = "holder";
 
@@ -13,12 +11,12 @@
 
   USER_JOURNEYS = "user_journeys";
 
-  LIBRARIES = [JQUERY, BOOTSTRAP, "" + HELPERS + "/" + HOLDER, USER_JOURNEYS, DRAG];
+  LIBRARIES = [JQUERY, BOOTSTRAP, HOLDER, USER_JOURNEYS, DRAG];
 
   require.config({
     paths: {
-      "jquery": "" + HELPERS + "/" + JQUERY,
-      "bootstrap": "" + HELPERS + "/" + BOOTSTRAP
+      "jquery": JQUERY,
+      "bootstrap": BOOTSTRAP
     },
     shim: {
       "bootstrap": {
@@ -28,7 +26,8 @@
   });
 
   require(LIBRARIES, function($) {
-    var advertisersClickMessageListener, advertisersMessageListener, advertisersRespondMessageListener, advertisersSendMessageListener, contentIconGenerator, contentIconListener, contentStatsCommentListener, contentStatsListeners, contentStatsLookBookListener, generateContentIcons, init, navTabListener, showIconAction, watchContentStats, watchLookBook, watchNav, watchOrderByFilter, watchOrderByPopover;
+    var advertisersClickMessageListener, advertisersMessageListener, advertisersRespondMessageListener, advertisersSendMessageListener, contentIconGenerator, contentIconListener, contentStatsCommentListener, contentStatsListeners, contentStatsLookBookListener, generateContentIcons, init, jQuery, navTabListener, showIconAction, watchContentStats, watchLookBook, watchNav, watchOrderByFilter, watchOrderByPopover;
+    jQuery = $;
     contentIconGenerator = function(icon, title) {
       var value, views;
       views = $(".title_content_icon > .glyphicon-" + icon);
