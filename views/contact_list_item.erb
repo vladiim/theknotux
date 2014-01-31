@@ -1,0 +1,37 @@
+<tr class="contact">
+  <td style="width:50px">
+    <img data-src="holder.js/40x40">
+  </td>
+  <td>
+    <b><a href="#"><%= name %></a></b>
+  </td>
+  <td>
+    <div class="label label-<%= invite_status %> contact-invite-reponse">
+      <span class="glyphicon glyphicon-<%= invite_glyph %>">&nbsp;<%= invite_response %></span>
+    </div>
+
+    <div class="dropdown contact-table-tag">
+      <button class="btn dropdown-toggle" type="button" id="contact-table-options-<%= name %>" data-toggle="dropdown"><span class="glyphicon glyphicon-cutlery"> Table 1
+      </button>
+
+      <ul class="dropdown-menu" role="menu" aria-labelledby="contact-table-options-<%= name %>">
+        <li role="presentation">
+          <a role="menuitem" tabindex="-1" href="#">Table 1</a>
+        </li>
+        <li role="presentation">
+          <a role="menuitem" tabindex="-1" href="#">Table 2</a>
+        </li>
+        <li role="presentation">
+          <a role="menuitem" tabindex="-1" href="#">Table 3</a>
+        </li>
+        <li role="presentation">
+          <a role="menuitem" tabindex="-1" href="#">Table 4</a>
+        </li>
+      </ul>
+    </div>
+
+  </td>
+  <td>
+    <p><a href="#"><%= channel %></a></p>
+  </td>
+</tr>

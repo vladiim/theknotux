@@ -1,0 +1,99 @@
+<div class="col-sm-4 content-stats">
+
+  <div id="stats-list">
+    <ul>
+      <li>
+        <ul class="content-stats-item">
+          <li><span class="glyphicon glyphicon-eye-open"></span></li>
+          <li><p><%= 50 + Random.rand(1000) %> views</p></li>
+        </ul>
+        <hr>
+      </li>
+
+      <li id="show-look-book">
+        <ul class="content-stats-item">
+          <li><span class="glyphicon glyphicon-heart"></span></li>
+          <li><a href="#"><%= 50 + Random.rand(500) %> Look Book</a></li>
+        </ul>
+        <hr>
+      </li>
+
+      <li id="show-comments">
+        <ul class="content-stats-item">
+          <li><span class="glyphicon glyphicon-comment"></span></li>
+          <li><a href="#"><%= 30 + Random.rand(200) %> comments</a></li>
+        </ul>
+        <hr>
+      </li>
+
+      <li>
+        <ul class="content-stats-item">
+          <li><span class="glyphicon glyphicon-share-alt"></span></li>
+          <li><a href="#"><%= 40 + Random.rand(400) %> shares</a></li>
+        </ul>
+        <hr>
+      </li>
+
+      <li>
+        <ul class="content-stats-item">
+          <li><span class="glyphicon glyphicon-map-marker"></span></li>
+          <li><a href="#"><%= 10 + Random.rand(80) %> suppliers</a></li>
+        </ul>
+        <hr>
+      </li>
+
+      <li>
+        <ul>
+          <a href="#" class="badge"><span class="glyphicon glyphicon-tag">Honeymoon</span></a>
+          <a href="#" class="badge"><span class="glyphicon glyphicon-tag">Blue</span></a>
+          <a href="#" class="badge"><span class="glyphicon glyphicon-tag">Summer</span></a>
+        </ul>
+        <hr>
+      </li>
+
+    </ul>
+  </div>
+
+  <div id="look-book-stats-show" class="hidden">
+    <h3>Look Book <span id="look-book-stats-close" class="glyphicon glyphicon-remove-circle"></h3>
+    <p>
+      218 people have added this piece of content to their <a href="/tools/look-book">Look Book</a>. Your <a href="/tools/look-book">Look Book</a> allows you to collect inspiration and plan your wedding.
+    </p>
+    <a href="#" class="btn btn-primary btn-full-width"><span class="glyphicon glyphicon-heart"></span> Add to Look Book</a>
+    <a href="#" class="btn btn-success btn-full-width"><span class="glyphicon glyphicon-eye-open"></span> Visit your Look Book</a>
+  </div>
+
+  <div id="comments-stats-show" class="hidden">
+    <h3>147 comments <span id="comment-stats-close" class="glyphicon glyphicon-remove-circle"></span></h3>
+
+    <div class="comment">
+      <div class="comment-image">
+        <img src="holder.js/100x100">
+      </div>
+      <div class="comment-text">
+        <h4>Jackie Smith <small>A day ago</small></h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+        <a href="#"><span class="glyphicon glyphicon-heart-empty"></span></a> | <a href="#">4 replies</a> | <a href="#"> Reply</a>
+      </div>
+      <hr>
+
+    <div class="comment">
+      <div class="comment-image">
+        <img src="holder.js/100x100">
+      </div>
+      <div class="comment-text">
+        <h4>Jackie Smith <small>A day ago</small></h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+        <a href="#"><span class="glyphicon glyphicon-heart-empty"></span></a> | <a href="#">4 replies</a> | <a href="#"> Reply</a>
+      </div>
+      <hr>
+
+      <div class="input-group">
+        <input type="text" class="form-control">
+        <span class="input-group-btn">
+          <button class="btn btn-primary">Comment</button>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

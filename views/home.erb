@@ -1,0 +1,25 @@
+<%= erb :nav, locals: locals %>
+
+<section id='main' class='container row'>
+  <div class='col-xs-12'>
+
+    <%= erb :title_content_slideshow, locals: locals %>
+
+    <section class='row'>
+      <hr>
+      <h3 class='col-md-12'>Trending on The Knot</h3>
+      <hr>
+
+      <section>
+        <% card_content.each do |card| %>
+          <%= erb :content_card, locals: { content: card } %>
+        <% end %>
+      </section>
+
+    </section>
+    
+  </div>
+
+</section>
+
+<%= erb :footer %>

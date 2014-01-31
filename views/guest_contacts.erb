@@ -1,0 +1,59 @@
+<section>
+  <h2>Contacts</h2>
+
+  <hr>
+
+  <div class="col-md-12">
+
+    <div class="input-group contacts-search">
+      <span class="input-group-btn">
+        <input class="form-control" type='text'></input>
+        <button class="btn btn-default" type="button">Search</button>
+      </span>
+    </div>
+
+    <div class="input-group contacts-filter">
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Filter by
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a href="#">Opened invite (140)</a></li>
+          <li><a href="#">Accepted (120)</a></li>
+          <li><a href="#">Declined (12)</a></li>
+          <li><a href="#">Seated (123)</a></li>
+          <li><a href="#">Not seated (23)</a></li>
+        </ul>
+      </div>
+    </div>    
+
+    <a href="#" class="btn btn-primary contact-importer">Import more contacts</a>
+
+  </div>
+
+  <hr>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Name</th>
+        <th>Status</th>
+        <th>Imported from</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% kylie = { name: "Kylie Andrews", invite_status: "success", invite_glyph: 'ok', invite_response: 'Accepted', channel: 'Facebook' } %>
+      <% john = { name: "John Smith", invite_status: "danger", invite_glyph: 'remove', invite_response: 'Declined', channel: 'GMail' } %>
+
+      <%= erb :contact_list_item, locals: kylie %>
+
+      <%= erb :contact_list_item, locals: john %>
+
+      <% 10.times do %>
+        <%= erb :contact_list_item, locals: kylie %>
+      <% end %>
+
+    </tbody>
+  </table>
+</section>

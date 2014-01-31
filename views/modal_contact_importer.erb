@@ -1,0 +1,34 @@
+<div class="modal fade" id="contact-importer" tabindex="-1" role="dialog" aria-labelledby="contact-importer-modal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+
+        <h4 class="modal-title" id="contact-importer-modal">Import contacts</h4>
+
+      </div>
+      <div class="modal-body row">
+
+
+        <div class="col-xs-6">
+          <h3>Import contacts from</h3>
+          <a href="#" class="btn btn-primary btn-full-width">Facebook</a>
+          <a href="#" class="btn btn-success btn-full-width">GMail</a>
+          <a href="#" class="btn btn-info btn-full-width">Hotmail</a>
+          <a href="#" class="btn btn-danger btn-full-width">Other places</a>
+        </div>
+
+        <div class="col-xs-6">
+          <h3>Imported contacts</h3>
+          <% 18.times do %>
+            <div class="col-xs-4">
+              <img data-src="holder.js/50x50">
+              Name
+            </div>
+          <% end %>
+        </div>
+
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

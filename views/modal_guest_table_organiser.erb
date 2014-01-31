@@ -1,0 +1,36 @@
+<div class="modal fade" id="guest-table-organiser" tabindex="-1" role="dialog" aria-labelledby="guest-table-organiserk-modal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+
+        <h4 class="modal-title" id="guest-table-organiserk-modal">Table 1: 12 guests</h4>
+
+      </div>
+      <div class="modal-body row">
+
+
+        <div class="col-xs-6">
+          <h3>Guests on Table 1</h3>
+            <% 12.times do %>
+            <div class="col-xs-4 guest-drag">
+              <img data-src="holder.js/50x50">
+              Name
+            </div>
+          <% end %>
+        </div>
+
+        <div class="col-xs-6">
+          <h3>Add other guests</h3>
+          <% 18.times do %>
+            <div class="col-xs-4 guest-drag">
+              <img data-src="holder.js/50x50">
+              Name
+            </div>
+          <% end %>
+        </div>
+
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

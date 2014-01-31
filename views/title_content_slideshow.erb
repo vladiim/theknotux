@@ -1,0 +1,25 @@
+<div id="title_content_carosel" class="carousel slide" data-ride="carousel" data-interval="false">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#title_content_carosel" data-slide-to="0" class="active"></li>
+    <li data-target="#title_content_carosel" data-slide-to="1"></li>
+    <li data-target="#title_content_carosel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <% title_content.each_with_index do |content, index| %>
+      <div class="item <%= 'active' if index == 0 %>">
+        <%= erb :title_content, locals: { title_content: content, slide: true } %>
+      </div>
+    <% end %>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#title_content_carosel" data-slide="prev">
+    <span id="title_content_slide_left" class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#title_content_carosel" data-slide="next">
+    <span id="title_content_slide_right" class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div>

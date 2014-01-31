@@ -1,0 +1,98 @@
+<!-- Modal -->
+<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+
+        <h4 class="modal-title" id="myModalLabel">Login/sign up</h4>
+
+      </div>
+      <div class="modal-body">
+
+        <ul class="nav nav-tabs">
+          <li class="active"><a href="#login">Login</a></li>
+          <li><a href="#signup">Sign up</a></li>
+          <li><a href="#forgot">Forgot</a></li>
+        </ul>
+
+        <div class="tab-content">
+
+          <div class="tab-pane login-signup active row" id="login">
+            <div class="col-md-6">
+              <p>Login to access your profile</p>
+              <form role="form">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+              </form>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+              <a href='/admin' type="button" class="btn btn-primary">Log in</a>
+            </div>
+
+            <div class="col-md-6">
+              <p>Or log in with</p>
+              <a href="#" class="btn btn-primary btn-full-width">Facebook</a>
+              <a href="#" class="btn btn-success btn-full-width">Pinterest</a>
+              <a href="#" class="btn btn-info btn-full-width">Instagram</a>
+            </div>
+
+          </div>
+
+          <div class="tab-pane login-signup row" id="signup">
+
+            <div class="col-md-6">
+              <p>Signup and use our great range of tools to plan your wedding</p>
+              <form role="form">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Confirm password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+              </form>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+              <a href='/admin' type="button" class="btn btn-primary">Sign up</a>
+            </div>
+
+            <div class="col-md-6">
+              <p>Or sign up with</p>
+              <a href="#" class="btn btn-primary btn-full-width">Facebook</a>
+              <a href="#" class="btn btn-success btn-full-width">Pinterest</a>
+              <a href="#" class="btn btn-info btn-full-width">Instagram</a>
+            </div>
+
+          </div>
+
+          <div class="tab-pane login-signup" id="forgot">
+            <p>Forgot your password? No worries, just fill in your email and we'll reset it for you</p>
+            <form role="form">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+              </div>
+            </form>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            <a href='/admin' type="button" class="btn btn-primary">Reset password</a>
+          </div>
+
+        </div>
+
+
+
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

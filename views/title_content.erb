@@ -1,0 +1,66 @@
+<div class="jumbotron <%= 'slide' if slide %>">
+  <div class='row'>
+
+    <section class="col-md-4">
+
+      <h2><%= title_content.fetch(:title).to_un_url %></h2>
+      <small class="title_content_meta">
+        by <%= title_content.fetch(:author) %> | <%= title_content.fetch(:posted) %>
+      </small>
+      <p>
+        <%= title_content.fetch(:desc) %>
+      </p>
+
+      <div class="row title_content_icons">
+        <% ["eye-open", "heart", "comment", "share-alt"].each do |icon| %>
+          <%= erb :title_content_icon, locals: { icon: icon } %>
+        <% end %>
+
+        <div class="icon_action eye-open hidden">
+          <a href="/content/<%= title_content.fetch(:title).to_url %>" class="btn btn-success">View article</a>
+        </div>
+
+        <div class="icon_action heart hidden">
+          <a href="/lookbook/<%= title_content.fetch(:title).to_url %>" class="btn btn-success">Add to your Look Book</a>
+        </div>
+
+        <div class="icon_action comment hidden">
+          <a href="/lookbook/<%= title_content.fetch(:title).to_url %>" class="btn btn-success">View comments</a>
+        </div>
+
+        <div class="icon_action share-alt hidden">
+          <p>Share on: <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Pinterest</a></p>
+        </div>
+      </div>
+
+      <p><a href="/content/<%= title_content.fetch(:title).to_url %>" class="btn btn-primary btn-lg" role="button" style="width:100%">
+        <%= title_content.fetch(:cta) %>
+      </a></p>
+    </section>
+
+    <div class="col-md-8">
+      <a href="#" class="thumbnail">
+        <img data-src="holder.js/200%x300">
+      </a>
+
+      <div class="tags">
+        <button class="btn btn-info title-tags">
+          <span class="glyphicon glyphicon-tag">&nbsp;Decor</span>
+        </button>
+
+        <button class="btn btn-info title-tags">
+          <span class="glyphicon glyphicon-tag">&nbsp;Blue</span>
+        </button>
+
+        <button class="btn btn-info title-tags">
+          <span class="glyphicon glyphicon-tag">&nbsp;Summer</span>
+        </button>
+
+        <button class="btn btn-info title-tags">
+          <span class="glyphicon glyphicon-tag">&nbsp;Rings</span>
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>

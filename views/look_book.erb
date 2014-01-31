@@ -1,0 +1,33 @@
+<%= erb :nav, locals: locals %>
+
+<section id='main' class='container row'>
+  <ol class="breadcrumb">
+    <li><a href="/home">Home</a></li>
+    <li><a href="/tools">Tools</a></li>
+    <li class="active">Look Book</li>
+  </ol>
+
+<section id='main' class='container row'>
+  <div class='col-xs-12'>
+
+    <h2>Look Book</h2>
+
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
+    </p>
+
+    <%= erb :look_book_options, locals: locals %>
+
+    <% ['wedding dress', 'ceremony', 'invitations', 'honeymoon'].each_with_index do |panel_title, index| %>
+      <%= erb :look_book_panel, locals: locals.merge({ panel_title: panel_title, panel_index: index }) %>
+    <% end %>
+
+    <section class="row panel panel-default look-book-panel">
+      <div class="panel-heading">
+        <b><a href="#">+ Add</a></b>
+      </div>
+    </section>
+  </div>
+</section>
+
+<%= erb :footer %>

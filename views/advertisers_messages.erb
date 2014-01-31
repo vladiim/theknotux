@@ -1,0 +1,25 @@
+<%= erb :advertisers_key_nav, locals: locals %>
+
+<section id='main-advertiser' class='container'>
+
+<section id='main' class='container row'>
+  <ol class="breadcrumb">
+    <li><a href="/advertisers">Home</a></li>
+    <li class="active"><%= title %></li>
+  </ol>
+
+  <div class="row panel panel-default">
+    <div class="panel-heading">
+      <b>Your have 7 new messages</b>
+    </div>
+
+    <div class="panel-body">
+
+      <%= erb :advertisers_messages_controls %>
+      <%= erb :advertisers_messages_message_list %>
+    </div>
+  </div>
+
+</section>
+
+<%= erb :footer %>

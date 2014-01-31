@@ -1,0 +1,82 @@
+<section class="row panel panel-default">
+
+  <div class="panel-heading toggle-look-book" data-toggle="filters">
+    <b>Filters
+      <span class="badge">12</span>
+     &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Total budget: 
+     <a href="#">$20,000 <span class="glyphicon glyphicon-edit"/></a>
+     &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Total to do: 
+     <span class='badge'><%= 10 + Random.rand(50) %></span>
+     </b>
+    </b>
+    <span class="glyphicon glyphicon-chevron-down pull-right"/></div>
+
+  <div id="filters-panel" class='panel-body'>
+
+    <p class="alert alert-success">
+      Based on the filter settings below we've made 43 recommendations for you. Edit the filters to change our recommendations.
+    </p>
+
+    <div class="col-xs-4">
+
+      <div class="col-sm-6">
+        <h4>Budget</h4>
+        <div class="look-book-setting budget">
+          <a data-toggle="popover" title data-content="<ul><li><b>Venue:</b> <a href='#look-book-title-link'>$10,000</a></li><li><b>Food & drink:</b> <a href='#look-book-title-link'>$10,000</a></li><li><b>Invites:</b> <a href='#look-book-title-link'>$2,000</a></li><li><b>Flowers:</b> <a href='#look-book-title-link'>$2,000</a></li></ul>" data-original-title="Budget breakdown" data-html="true">$20,000</a>
+        </div>
+        <hr>
+      </div>
+
+      <div class="col-sm-6">
+        <h4>Date</h4>
+        <div class="look-book-setting">
+          <a>In 3 months</a>
+        </div>
+        <hr>
+      </div>
+
+      <div class="col-sm-6">
+        <h4>Location</h4>
+        <div class="look-book-setting">
+          <a>Perth, WA</a>
+        </div>
+        <hr>
+      </div>
+
+      <div class="col-sm-6">
+        <h4>To do</h4>
+        <div class="look-book-setting">
+          <a>34 items</a>
+        </div>
+        <hr>
+      </div>
+
+      <div class="col-sm-8">
+        <h4>Colours</h4>
+        <div class="tags">
+          <span class="label label-info">Aqua</span><span class="label label-info">Beige</span><span class="label label-info">Bronze</span><span class="label  label-info themes">+</span>
+        </div>
+        <hr>
+      </div>
+
+      <div class="look-book-cta">
+        <a href="#" class="btn btn-primary btn-full-width"><span class="glyphicon glyphicon-share-alt"></span> Invite friends to help</a>
+
+        <a href="#" class="btn btn-success btn-full-width"><span class="glyphicon glyphicon-question-sign"></span> Ask The Knot a question</a>
+      </div>
+
+    </div>
+
+    <div class="col-xs-8 themes">
+      <h4>Themes</h4>
+      <% themes.each do |theme| %>
+        <div class="col-xs-2 theme">
+          <p><%= theme %></p>
+          <img data-src="holder.js/100x100">
+        </div>
+      <% end %>
+    </div>
+
+  </div>
+
+</section>

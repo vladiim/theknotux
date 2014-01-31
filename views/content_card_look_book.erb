@@ -1,0 +1,26 @@
+<article class='col-sm-4 content-card'>
+  <section>
+
+    <h4>
+      <%= content.fetch(:title).to_un_url[0..22] %>
+      <%= '...' if content.fetch(:title).size > 22 %>
+    </h4>
+
+    <img data-src="holder.js/100%x200">
+
+    <small><%= content.fetch(:posted) %> | <%= content.fetch(:author) %> | <%= content.fetch(:content_type) %></small>
+
+    <p>
+      <%= content.fetch(:desc)[0..31] %>
+      <%= "..." if content.fetch(:desc).size > 31 %>
+    </p>
+
+    <% cta_view = [ :look_book_card_cta_recommendation, :look_book_card_cta_added ].sample %>
+
+    <% cta_view = :look_book_card_add_item if content.fetch(:content_type) == 'Add' %>
+
+    <%= erb cta_view, locals: locals %>
+
+  </section>
+
+</article>

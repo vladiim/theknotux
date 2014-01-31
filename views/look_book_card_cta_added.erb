@@ -1,0 +1,9 @@
+<h4>Added by you <%= 2 + Random.rand(20) %> days ago</h4>
+
+<% if content.fetch(:content_type) == 'Suppliers' %>
+  <a class="btn btn-info btn-full-width" href='#'>Contact supplier</a>
+<% end %>
+
+<a class="btn btn-primary btn-full-width" href='#'>View</a>
+
+<a class="btn btn-danger btn-full-width" href='#'>Remove from Look Book</a>

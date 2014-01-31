@@ -1,0 +1,112 @@
+<%= erb :nav, locals: locals %>
+
+<section id='main' class='container row'>
+
+<section id='main' class='container row'>
+  <ol class="breadcrumb">
+    <li><a href="/home">Home</a></li>
+    <li><a href="/advertisers">Advertisers</a></li>
+    <li class="active">About</li>
+  </ol>
+
+
+  <div class='col-xs-12'>
+
+    <section class='row'>
+
+      <div class="col-md-4">
+        <h2>Advertise on The Knot</h2>
+
+        <p>Join 456 Wedding Suppliers who use The Knot to grow their business.</p>
+        
+        <div>
+          <a href="/advertisers/sales" class="btn btn-primary btn-full-width" data-toggle="modal" data-target="#signup"><span class="glyphicon glyphicon-heart"></span> Contact sales</a>
+
+          <a href="/advertisers/plans" class="btn btn-success btn-full-width"><span class="glyphicon glyphicon-info-sign"></span> View pricing plans</a>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <a href="#" class="thumbnail">
+          <img data-src="holder.js/100%x250">
+        </a>
+      </div>
+    </section>
+
+    <hr>
+    <div class='row body-content'>
+
+      <div class="col-sm-8">
+        <h2>Reason to become a supplier</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <hr>
+
+        <div class="row">
+          <h2>Another reason</h2>
+          <div class="col-xs-6">
+            <img data-src="holder.js/100%x250">
+          </div>
+          <div class="col-xs-6">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class='row'>
+          <h2>The last reason</h2>
+          <div class="col-xs-6">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+          <div class="col-xs-6">
+            <img data-src="holder.js/100%x250">
+          </div>
+        </div>
+        <hr>
+        <h2>Like conclusions?</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <hr>
+
+      </div>
+
+      <%= erb :supplier_stats, locals: locals %>
+
+    </div>
+
+    <section class='row'>
+      <hr>
+      <h3 class='col-md-12'>Case studies</h3>
+      <hr>
+
+      <section>
+        <% 3.times do %>
+          <%= erb :content_card, locals: { content: card_content } %>
+        <% end %>
+      </section>
+
+    </section>
+    
+  </div>
+  <%= erb :signup_modal %>
+</section>
+
+<%= erb :footer %>

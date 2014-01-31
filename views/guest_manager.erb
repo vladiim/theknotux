@@ -1,0 +1,25 @@
+<%= erb :nav, locals: locals %>
+
+<section id='main' class='container row'>
+  <ol class="breadcrumb">
+    <li><a href="/home">Home</a></li>
+    <li><a href="/tools">Tools</a></li>
+    <li class="active">Guest manager</li>
+  </ol>
+
+<section id='main' class='container row'>
+  <div class='col-xs-12'>
+
+    <h2>Guest manager</h2>
+
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
+    </p>
+
+    <%= erb :guest_manager_stats %>
+
+    <%= erb :guest_contacts %>
+  </div>
+</section>
+
+<%= erb :footer %>

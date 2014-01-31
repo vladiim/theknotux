@@ -1,0 +1,34 @@
+<article class='col-sm-4 content-card'>
+  <section>
+    <h4>
+      <%= content.fetch(:title).to_un_url[0..22] %>
+      <%= '...' if content.fetch(:title).size > 22 %>
+    </h4>
+
+    <a href="#" class="thumbnail">
+      <img data-src="holder.js/300x250">
+    </a>
+
+    <small><%= content.fetch(:posted) %> | <%= content.fetch(:author) %> | <%= content.fetch(:content_type) %></small>
+
+    <p>
+      <%= content.fetch(:desc)[0..31] %>
+      <%= "..." if content.fetch(:desc).size > 31 %>
+    </p>
+
+    <a class="btn btn-success btn-full-width" href='/<%= content.fetch(:content_type) == 'Suppliers' ? 'suppliers' : 'content'  %>/<%= content.fetch(:title).to_url %>'><%= content.fetch(:cta) %></a>
+
+    <div class="row title_content_icons">
+      <% ["eye-open", "heart", "comment", "share-alt"].each do |icon| %>
+        <%= erb :title_content_icon, locals: { icon: icon } %>
+      <% end %>
+    </div>
+
+    <div class="tags">
+      <a href="#" class="badge"><span class="glyphicon glyphicon-tag">Decor</span></a>
+      <a href="#" class="badge"><span class="glyphicon glyphicon-tag">Blue</span></a>
+      <a href="#" class="badge"><span class="glyphicon glyphicon-tag">Summer</span></a>
+      <a href="#" class="badge"><span class="glyphicon glyphicon-tag">Rings</span></a>
+    </div>
+  </section>
+</article>

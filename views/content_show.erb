@@ -1,0 +1,114 @@
+<%= erb :nav, locals: locals %>
+
+<section id='main' class='container row'>
+  <ol class="breadcrumb">
+    <li><a href="/home">Home</a></li>
+    <li><a href="/inspiration">Inspiration</a></li>
+    <li><a href="/inspiration/honeymoon">Honeymoon</a></li>
+    <li class="active">Destination Guide: O’ahu, Hawaii</li>
+  </ol>
+
+  <div class="row">
+    <div class='col-xs-12'>
+
+      <div class="col-md-4">
+        <h2>Destination Guide: O’ahu, Hawaii</h2>
+
+        <small>by Juliette Winter | 2 hours ago</small>
+
+        <p>Looking for paradise on earth? Try O’ahu.</p>
+        
+        <div>
+          <a href="#" class="btn btn-primary btn-full-width"><span class="glyphicon glyphicon-heart"></span> Add to Look Book</a>
+
+          <a href="#" class="btn btn-success btn-full-width"><span class="glyphicon glyphicon-map-marker"></span> View 23 Holiday Suppliers</a>
+        </div>
+
+        <div class="tags">
+          <a href="#" class="badge"><span class="glyphicon glyphicon-tag">Honeymoon</span></a>
+          <a href="#" class="badge"><span class="glyphicon glyphicon-tag">Blue</span></a>
+          <a href="#" class="badge"><span class="glyphicon glyphicon-tag">Summer</span></a>
+        </div>
+      </div>
+
+      <div class="col-md-8">
+        <a href="#" class="thumbnail">
+          <img data-src="holder.js/100%x250">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class='row body-content'>
+
+    <div class="col-sm-8">
+      <p>
+        The scene is instantly familiar…a sparkling white beach with an unmistakable crater at the far end. Palm trees lolling lazily in the breeze. It’s the epitome of tropical paradise, the quintessential beach vacation. It’s Honolulu’s world famous Waikiki Beach on the island of O’ahu. Honolulu county, which includes Waikiki, is a city of over 900,000 people. But it takes up only about one eighth of O’ahu, the second-most northerly isle in the Hawaiian chain.
+      </p>
+
+      <img data-src="holder.js/100%x350">
+      <small><i>Relaxing on Lanakai Beach</i></small>
+
+      <div>
+        <h3>Before You Go: Need-to-know info</h3>
+        <ul>
+          <li><b>Language:</b> English, pidgin (a blend of English, Hawaiian, Japanese and Portuguese)</li>
+          <li><b>Flight time:</b> Sydney 9 hours, 45 minutes; Melbourne 10 hours 30 minutes; Brisbane 9 hours 30 minutes</li>
+          <li><b>Getting around:</b> Car, bike, taxi or trolley</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>When To Go: O’ahu at its best</h3>
+        <ul>
+          <li><b>Best weather:</b> Trade winds keep things comfy all year round. The average temperature is between 25 to 35 degrees celcius. Summer is drier and has higher temps (April to November) while winter (December to March) is a little cooler.</li>
+          <li><b>Best prices:</b> Mid-April to June and September to mid-December</li>
+        </ul>
+      </div>
+
+      <h3>What To Do</h3>
+
+      <div class='row'>
+        <div class='well ad col-md-7'>
+          <p>The Knot Advertisement</p>
+          <img data-src="holder.js/300x250">
+        </div>
+        <div class="col-md-5">
+          <p>
+            <b>Bountiful beaches:</b> Sandy shores rim the island: There’s literally a beach or state beach park every five minutes as you drive around the island. Some to check out when you’re taking a leisurely coastal drive: Sandy Beach, with its perfect body surfing waves; Makapu’u, thick with seaweed and kind of rough, but its black-cliff backdrop is famous for its cameo in From Here to Eternity; Kailua Beach, in a pretty, sheltered residential area as you follow the coast north.
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <b>Swimming and snorkelling:</b> Widely known for some of the very best snorkelling and diving on the island, Hanauma Bay is home to all kinds of fish and coral, and the clear turquoise, shallow cove, reached after a walk (or ride) down a steep trail, is beautiful. Be sure to make a quick stop at the Halona Blowhole, just another few minutes by car past Hanauma Bay, where foamy waves flow through a lava tube and reach over 18 metres into the air.
+      </div>
+      <br>
+      <div>
+        <b>Swimming and snorkelling:</b> Widely known for some of the very best snorkelling and diving on the island, Hanauma Bay is home to all kinds of fish and coral, and the clear turquoise, shallow cove, reached after a walk (or ride) down a steep trail, is beautiful. Be sure to make a quick stop at the Halona Blowhole, just another few minutes by car past Hanauma Bay, where foamy waves flow through a lava tube and reach over 18 metres into the air.
+      </div>
+
+    </div>
+
+    <%= erb :content_stats, locals: locals %>
+
+  </div>
+</section>
+
+<hr>
+
+<section id="related-content" class=''>
+  <h3 class='col-md-12'>Related content</h3>
+  <hr>
+
+  <section>
+    <% card_content.each do |card| %>
+      <%= erb :content_card, locals: { content: card } %>
+    <% end %>
+  </section>
+
+</section>
+
+<%= erb :footer %>

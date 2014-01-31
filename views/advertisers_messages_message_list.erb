@@ -1,0 +1,73 @@
+<div class="col-xs-8">
+  <p id="message-sent-alert" class="alert alert-success hidden">
+    Message sent!
+  </p>
+  <table id="message-list" class="table table-hover messages">
+    <thead>
+      <tr>
+        <th style="width:20px"></th>
+        <th style="width:150px">From/to</th>
+        <th>Subject</th>
+        <th style="width:100px">Date</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td style="width:20px"><span class="glyphicon glyphicon-star-empty"></span></td>
+        <td style="width:150px">From: Julie Roberts</td>
+        <td><b>I'd like to be a pretty woman</b></td>
+        <td style="width:100px">03/02/2014</td>
+      </tr>
+
+      <tr>
+        <td style="width:20px"><span class="glyphicon glyphicon-star-empty"></span></td>
+        <td style="width:150px">To: Jessica Swavley</td>
+        <td><b>Growing my leads with editorial</b></td>
+        <td style="width:100px">18/01/2014</td>
+      </tr>
+      <% 5.times do %>
+        <tr>
+          <td style="width:20px"><span class="glyphicon glyphicon-star-empty"></span></td>
+          <td style="width:150px">From: Lorem ipsum</td>
+          <td><b>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore </b></td>
+          <td style="width:100px">18/01/2014</td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <section id="read-message" class="hidden">
+    <ul>
+      <hr>
+      <li><b>From:</b> Lorem ipsum</li>
+      <hr>
+      <li><b>Subject: onsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</b></li>
+      <hr>
+      <li>
+        Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </li>
+      <hr>
+      <a id="respond-to-message" href="#" class="btn btn-success">Respond</a>
+    </ul>
+  </section>
+
+  <section id="compose-message" class="hidden">
+    <ul>
+      <hr>
+      <li><b>To:</b> Lorem ipsum</li>
+      <hr>
+      <li><b>RE: onsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</b></li>
+      <hr>
+      <li>
+        <form role="form">
+          <textarea id="message-compose-text">
+          </textarea>
+        </form>
+      </li>
+      <hr>
+      <a id="send-message" href="#" class="btn btn-success">Send</a>
+    </ul>
+  </section>
+</div>

@@ -1,0 +1,27 @@
+<nav class="navbar-inverse navbar-advertiser navbar-fixed-top yamm navbar-default" role="navigation">
+
+  <%= erb :nav_mobile_header %>
+
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+    <ul class="nav navbar-nav">
+      <%= erb :nav_key_items, locals: locals %>
+    </ul>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="/advertisers/messages">Messages <span class="label label-danger">7</span></a></li>
+
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user" /> Vlad<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="/advertisers">My settings</a></li>
+          <li><a href="/advertisers/listings">My 3 listings</a></li>
+          <li><a href="#">Log out</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+    </ul>
+  </div><!-- /.navbar-collapse -->
+</nav>

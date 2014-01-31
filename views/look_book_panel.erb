@@ -1,0 +1,26 @@
+<section class="row panel panel-default look-book-panel">
+
+  <div data-toggle="<%= panel_title.to_url %>" class="panel-heading toggle-look-book">
+    <b><%= panel_title.capitalize %>
+      <span class="badge">3</span>
+       &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Budget: 
+       <a href="#">$<%= 200 + Random.rand(20000) %> <span class="glyphicon glyphicon-edit"/></a>
+       &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;To do: 
+       <span class='badge'><%= 1 + Random.rand(9) %></span>
+     </b>
+     <span class="glyphicon glyphicon-chevron-down pull-right"/>
+  </div>
+
+  <div id="<%= panel_title.to_url %>-panel" class='panel-body-budget hidden'>
+    <% if panel_index == 0 %>
+      <% add_card = { title: 'Add item', posted: 'Now', content_type: 'Add', author: 'You', desc: 'Add The Knot content or your own.'  } %>
+      <% cards << add_card %>
+    <% end %>
+    <% cards.each do |card| %>
+      <%= erb :content_card_look_book, locals: { content: card } %>
+    <% end %>
+
+    
+
+  </div>
+</section>

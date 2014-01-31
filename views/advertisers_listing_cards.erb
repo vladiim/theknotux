@@ -1,0 +1,12 @@
+<section id="advertisers-listing-cards">
+  <hr>
+  <h3>Your listings</h3>
+  <a href="/advertisers/new/listing" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-star-empty"></span> Add listing</a>
+  <hr>
+
+  <section>
+    <% 3.times do %>
+      <%= erb :content_card, locals: { content: card } %>
+    <% end %>
+  </section>
+</section>
