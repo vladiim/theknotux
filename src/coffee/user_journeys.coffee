@@ -1,7 +1,7 @@
 APP       = "app"
-RAPHAEL   = 'helpers/raphael'
-FLOWCHART = 'helpers/flowchart'
-OPTIONS   = 'data/flowchartOptions'
+RAPHAEL   = 'raphael'
+FLOWCHART = 'flowchart'
+OPTIONS   = 'flowchartOptions'
 
 FILES     = [APP, RAPHAEL, FLOWCHART, OPTIONS]
 

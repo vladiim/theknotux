@@ -21,6 +21,9 @@
     shim: {
       "bootstrap": {
         deps: [JQUERY]
+      },
+      "dragable": {
+        deps: [JQUERY]
       }
     }
   });

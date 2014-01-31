@@ -3,11 +3,11 @@
 
   APP = "app";
 
-  RAPHAEL = 'helpers/raphael';
+  RAPHAEL = 'raphael';
 
-  FLOWCHART = 'helpers/flowchart';
+  FLOWCHART = 'flowchart';
 
-  OPTIONS = 'data/flowchartOptions';
+  OPTIONS = 'flowchartOptions';
 
   FILES = [APP, RAPHAEL, FLOWCHART, OPTIONS];
 

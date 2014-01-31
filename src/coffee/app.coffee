@@ -14,6 +14,8 @@ require.config
   shim:
   	"bootstrap":
       deps: [JQUERY]
+    "dragable":
+      deps: [JQUERY]
 
 require LIBRARIES, ( $ ) ->
   jQuery = $
