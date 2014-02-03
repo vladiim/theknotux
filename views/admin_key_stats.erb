@@ -1,0 +1,46 @@
+<section class="content-stats admin">
+
+  <h2>The Knot Admin</h2>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <b>Management panel</b>
+    </div>
+
+    <div class="panel-body">
+
+      <div class="col-xs-4">
+
+        <div class="admin-stats">
+
+          <ul class="nav nav-tabs">
+            <li class="active">
+              <a href="#admin-kpis" data-toggle="tab">KPIs</a>
+            </li>
+            <li>
+              <a href="#admin-to-do" data-toggle="tab">To do items</a>
+            </li>
+          </ul>
+
+          <div class="tab-content admin-stats">
+            <div id="admin-kpis" class="tab-pane active">
+              <%= erb :admin_kpis, locals: locals %>
+            </div>
+
+            <div id="admin-to-do" class="tab-pane">
+              <%= erb :admin_to_do, locals: locals %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-8">
+        <canvas id="myChart" width="600" height="400"></canvas>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script src="/js/chart.js"></script>
+<script src="/js/drawAdResults.js"></script>

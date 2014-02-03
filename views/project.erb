@@ -1,8 +1,9 @@
-<header>
+<header class="project">
   <h1>The Knot UX</h1>
   <p>The goal for this project is to deliver a best practice digital website for The Knot that is strategically aligned to The Knot’s business.</p>
 </header>
-<br>
+<hr>
+
 <section class="col-md-3">
   <h3>UX Strategy</h3>
   <p>
@@ -10,10 +11,93 @@
   </p>
   <a href="/strategy" class="btn btn-primary">View UX Strategy</a>
 </section>
-<section class="col-md-3">
+
+<section class="col-md-3 left-border add-height">
   <h3>User Journeys</h3>
   <p>
     There are <%= uj_length %> user journeys that outline the way users will interact with The Knot.
   </p>
   <a href="/user_journeys" class="btn btn-primary">View User Journeys</a>
+</section>
+
+<section class="col-md-3 left-border">
+  <h3>Wires</h3>
+  <p>
+    The following interactive wireframes demonstrate the core site experience as architected in the strategy and user journeys.
+  </p>
+  
+  <ul class="nav nav-tabs">
+    <li class="active">
+      <a href="#visitor-wires">Visitor</a>
+    </li>
+    <li>
+      <a href="#supplier-wires">Supplier</a>
+    </li>
+    <li>
+      <a href="#admin-wires">Admin</a>
+    </li>
+  </ul>
+
+  <div class="tab-content wires">
+    <div id="visitor-wires" class="tab-pane active">
+      <ul>
+        <li>
+          <a href="/home">Homepage</a>
+        </li>
+
+        <li>
+          <a href="/inspiration/honeymoons">Inspiration category</a>
+        </li>
+
+        <li>
+          <a href="/suppliers/travel">Supplier category</a>
+        </li>
+
+        <li>
+          <a href="/content/blah">Content view</a>
+        </li>
+
+        <li>
+          <a href="/tools/look-book">Look book</a>
+        </li>
+
+        <li>
+          <a href="/tools/guest-manager">Guest manager</a>
+        </li>
+      </ul>
+    </div>
+
+    <div id="supplier-wires" class="tab-pane">
+      <ul>
+        <li>
+          <a href="/advertisers/about">Sales page</a>
+        </li>
+
+        <li>
+          <a href="/advertisers/plans">Package list</a>
+        </li>
+
+        <li>
+          <a href="/advertisers">Management panel</a>
+        </li>
+
+        <li>
+          <a href="/advertisers/new/listing">New listing</a>
+        </li>
+
+        <li>
+          <a href="/advertisers/messages">Messages</a>
+        </li>
+      </ul>
+    </div>
+
+    <div id="admin-wires" class="tab-pane">
+      <ul>
+        <li>
+          <a href="/admin/home">Management panel</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
 </section>

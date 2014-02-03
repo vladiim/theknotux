@@ -1,0 +1,43 @@
+<nav class="navbar-inverse yamm navbar-default" role="navigation">
+
+  <%= erb :nav_mobile_header %>
+
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+    <ul class="nav navbar-nav">
+
+      <% nav.each do |nav_item| %>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <%= nav_item.fetch(:title) %>
+            <b class="caret"></b>
+          </a>
+
+          <ul class="dropdown-menu nav-menu-dropdown">
+            <% nav_item.fetch(:items).each do |item| %>
+              <li>
+                <a href="/admin/wp-link">
+                  <%= item %>
+                </a>
+              </li>
+            <% end %>
+          </ul>
+        </li>
+      <% end %>
+
+    </ul>
+
+
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="/admin/messages">Messages <span class="label label-danger">7</span></a></li>
+
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user" /> Vlad<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="/admin/home">My settings</a></li>
+          <li><a href="#">Log out</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>

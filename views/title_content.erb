@@ -33,7 +33,9 @@
         </div>
       </div>
 
-      <p><a href="/content/<%= title_content.fetch(:title).to_url %>" class="btn btn-primary btn-lg" role="button" style="width:100%">
+      <% url = (title_content.fetch(:content_type) == 'Suppliers') ? "/suppliers/listings/#{title_content.fetch(:title).to_url}" : "/inspiration/#{title_content.fetch(:title).to_url}" %>
+
+      <p><a href="<%= url %>" class="btn btn-primary btn-lg" role="button" style="width:100%">
         <%= title_content.fetch(:cta) %>
       </a></p>
     </section>
@@ -44,19 +46,19 @@
       </a>
 
       <div class="tags">
-        <button class="btn btn-info title-tags">
+        <button href="/inspiration/decor" class="btn btn-info title-tags">
           <span class="glyphicon glyphicon-tag">&nbsp;Decor</span>
         </button>
 
-        <button class="btn btn-info title-tags">
+        <button href="/inspiration/blue" class="btn btn-info title-tags">
           <span class="glyphicon glyphicon-tag">&nbsp;Blue</span>
         </button>
 
-        <button class="btn btn-info title-tags">
+        <button href="/inspiration/summer" class="btn btn-info title-tags">
           <span class="glyphicon glyphicon-tag">&nbsp;Summer</span>
         </button>
 
-        <button class="btn btn-info title-tags">
+        <button href="/inspiration/rings" class="btn btn-info title-tags">
           <span class="glyphicon glyphicon-tag">&nbsp;Rings</span>
         </button>
       </div>

@@ -227,12 +227,18 @@ footer ul li {
   margin-bottom: 10px;
 }
 
+#compose-message ul,
+#read-message ul,
 .advertiser-stats ul,
 .guest-manager-stats ul,
 .content-stats ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+.content-stats.admin {
+  margin: 10px;
 }
 
 .content-stats-item li,
@@ -257,9 +263,18 @@ footer ul li {
   margin: 5px 20px;
 }
 
+.content-stats-item.admin li a {
+  font-size: 100%;
+}
+
 .content-stats-item li p,
 .content-stats-item li a {
   font-size: 200%;
+}
+
+.content-stats-item.advertiser-profile li p,
+.content-stats-item.advertiser-profile li a {
+  font-size: 150%;
 }
 
 .content-stats-item.supplier:nth-child(-n+3) {
@@ -339,7 +354,7 @@ footer ul li {
   padding: 0 50px;
 }
 
-.content-stats-item.advertiser-profile {
+.content-stats-item.admin {
   font-size: 80%;
 }
 
@@ -418,4 +433,24 @@ textarea#message-compose-text {
   float: left;
   padding: 10px;
   font-size: 105%;
+}
+
+.tab-content.admin-stats {
+  margin-top: 20px;
+}
+
+.tab-content.wires {
+  margin-top: 10px;
+}
+
+header.project {
+  margin: 10px;
+}
+
+.left-border {
+  border-left: 1px solid #ddd;
+}
+
+.left-border.add-height {
+  height: 330px;
 }

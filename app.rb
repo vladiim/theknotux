@@ -36,6 +36,11 @@ supplier_items    = { title: "Suppliers", categories: [ pre_wedding_2, reception
 
 nav               = { nav_items: [ inspiration_items, supplier_items ] }
 
+nav_comments      = { title: "Comments (24)", items: [ "Pending (24)", "Approved (23,456)" ]  }
+nav_posts         = { title: "Posts", items: [ "Create new", "My unpublished (3)", "My published (123)", "All unpublished (30)", "All published (1,230)" ] }
+
+admin_nav         = [ nav_posts, nav_comments ]
+
 ###### --------------- ###### USER JOURNEYS ###### --------------- ######
 
 USER_JOURNEYS_LENGTH = USER_JOURNEYS.inject(0) { |sum, u| sum + u.fetch(:ujs).length }
@@ -226,6 +231,16 @@ get "/suppliers/:category_name" do
   }
 end
 
+get "/suppliers/listings/:name" do
+  name = params[:name]
+
+  erb :index, locals: {
+    content: "supplier_listing_show",
+    nav: nav,
+    title: name
+  }
+end
+
 get '/content/:title' do
   title = params[:title].to_un_url
   erb :index, locals: { 
@@ -296,6 +311,16 @@ get "/advertisers/messages" do
     content: 'advertisers_messages',
     nav: nav,
     title: 'Messages [7]'
+  }
+end
+
+###### --------------- ###### ADMIN WIRES ###### --------------- ######
+
+get "/admin/home" do
+  erb :index, locals: {
+    content: "admin_home",
+    nav: admin_nav,
+    title: "Admin"
   }
 end
 
