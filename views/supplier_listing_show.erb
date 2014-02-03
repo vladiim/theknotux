@@ -3,10 +3,86 @@
 <section id='main' class='container row'>
   <ol class="breadcrumb">
     <li><a href="/home">Home</a></li>
-    <li><a href="/inspiration">Inspiration</a></li>
-    <li><a href="/inspiration/honeymoon">Honeymoon</a></li>
-    <li class="active">Destination Guide: O’ahu, Hawaii</li>
+    <li><a href="/suppliers">Suppliers</a></li>
+    <li><a href="/suppliers/photography">Photography</a></li>
+    <li class="active"><%= title %></li>
   </ol>
+</section>
+
+  <div class="row">
+    <div class='col-xs-12'>
+
+      <div class="col-md-4">
+        <h2>Image Couture</h2>
+
+        <small><a href="#">0417000...</a> | <a href="#">Leichhardt...</a></small>
+
+        <p>Style, class and exclusivity.</p>
+        
+        <div>
+          <a href="#" class="btn btn-primary btn-full-width"><span class="glyphicon glyphicon-heart"></span> Add to Look Book</a>
+
+          <a href="#" class="btn btn-success btn-full-width"><span class="glyphicon glyphicon-envelope"></span> Contact directly</a>
+
+          <a href="#" class="btn btn-success btn-full-width"><span class="glyphicon glyphicon-home"></span> Visit website</a>
+        </div>
+
+        <div class="tags">
+          <a href="/inspiration/honeymoon" class="badge"><span class="glyphicon glyphicon-tag">Honeymoon</span></a>
+          <a href="/inspiration/blue" class="badge"><span class="glyphicon glyphicon-tag">Blue</span></a>
+          <a href="/inspiration/summer" class="badge"><span class="glyphicon glyphicon-tag">Summer</span></a>
+        </div>
+      </div>
+
+      <div class="col-md-8">
+        <a href="#" class="thumbnail">
+          <img data-src="holder.js/100%x250">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class='row body-content'>
+
+    <div class="col-sm-8">
+
+      <img data-src="holder.js/100%x350">
+
+      A wedding album from Image Couture evokes all these things. With a passion and talent for creating beautiful photography, Nikolas and his team from Image Couture will ensure the most important day of your life is captured with a flair and style unique to the studio.
+      <hr>
+
+      <img data-src="holder.js/100%x350">
+
+      A visit to Image Couture will leave with you an impression of high fashion magazine style imagery, stunning hand crafted albums and an end finished product second to none.
+      <hr>
+
+      <img data-src="holder.js/100%x350">
+
+      With a range of packages to suit the most discerning couple, Image Couture can only be first preference for your wedding photography.
+      <hr>
+    </div>
+
+    <%= erb :content_stats, locals: locals %>
+
+  </div>
+</section>
+
+<hr>
+
+<section id="related-content" class=''>
+  <h3 class='col-md-12'>Related content</h3>
+  <hr>
+
+  <section>
+
+    <% 3.times do %>
+      <%= erb :content_card, locals: { content: card_content } %>
+    <% end %>
+
+  </section>
+
 </section>
 
 <%= erb :footer %>

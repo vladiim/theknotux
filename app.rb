@@ -28,10 +28,10 @@ bride             = { title: "Bride, dress & party", items: ["Wedding dress", "H
 other             = { title: "Other", items: ["Real weddings", "Honeymoon"] }
 inspiration_items = { title: "Inspiration", categories: [ pre_wedding, reception, bride, other ] }
 
-pre_wedding_2     = { title: "Pre-wedding", items: ["Planning (26)", "Invitations (20)", "Wedding prep & events (13)", "Engagement (18)"]}
-reception_2       = { title: "Reception & ceremony", items: ["Reception (119)", "Photo & video (115)", "Ceremony (64)", "Presents & Registry (4)"]}
-bride_2           = { title: "Bride, dress & party", items: ["Dresses & fashion (96)", "Beauty (20)", "Gown cleaning & preservation (6)"]}
-post              = { title: "Post wedding", items: ["Honeymoon & travel (37)", ""]}
+pre_wedding_2     = { title: "Pre-wedding", items: ["Engagement (18)", "Events (13)", "Invitations (20)", "Planning (26)" ]}
+reception_2       = { title: "Reception & ceremony", items: [ "Cakes & catering (9)", "Ceremony (2)", "Decor (4)", "Flowers (14)", "Invitations & stationary (23)", "Music & dancing (10)", "Photo & video (115)", "Presents & registry (4)", "Venues (32)" ]}
+bride_2           = { title: "Bride, dress & party", items: [ "Accessories (94)", "Beauty (23)", "Bridesmaid dresses (2)",  "Formal wear (21)", "Gown cleaning (5)", "Wedding dress (54)" ] }
+post              = { title: "Post wedding", items: ["Honeymoon (37)", ""]}
 supplier_items    = { title: "Suppliers", categories: [ pre_wedding_2, reception_2, bride_2, post ] }
 
 nav               = { nav_items: [ inspiration_items, supplier_items ] }
@@ -232,17 +232,20 @@ get "/suppliers/:category_name" do
 end
 
 get "/suppliers/listings/:name" do
-  name = params[:name]
+  name    = params[:name].to_un_url
+  content = supplier_content_generator(name).to_h
 
   erb :index, locals: {
     content: "supplier_listing_show",
     nav: nav,
+    card_content: content,
     title: name
   }
 end
 
 get '/content/:title' do
   title = params[:title].to_un_url
+
   erb :index, locals: { 
     content: 'content_show',
     nav: nav,
