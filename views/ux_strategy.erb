@@ -9,74 +9,60 @@
     <section>
       <h3>Background</h3>
       <p>
-        The Knot was launched in to the Australian market in October of 2009 off the back of the very successful website and magazine of the same name in the US. In Australia The Knot creates revenue through ad placements (managed by NineMSN) and suppliers paying for listings (see Business Value Model below). Since 2009 the site has grown in complexity leading to a disjointed user experience for its primary users (visitors, suppliers and admins). The Knot therefore wants to revise the site's overall experience in order to drive more value to all site users.
+        The Knot was launched in to the Australian market in October 2009, off the back of the very successful website and magazine of the same name in the US. In Australia, The Knot creates revenue through ad placements (managed by NineMSN) and suppliers paying for listings (see Business Value Model below). Since 2009 the site has grown in complexity leading to a disjointed user experience for its primary users (visitors, suppliers and admins). The Knot therefore wants to revise the site's overall experience in order to drive more value to all site users.
       </p>
+      <hr>
       <h4>The Knot Business Value Model</h4>
       <img src="/images/business_value.jpg">
     </section>
 
     <hr>
 
-    <section class='row'>
-      <h3>Business goals</h3>
-      <div class="col-md-6">
-        <b>The Knot's key business goals are to:</b>
-        <ol>
-          <li>Be the #1 lead gen business for the bridal industry</li>
-          <li>Make The Knot a part of any Australian bride's vernacular</li>
-        </ol>
+    <ul class="nav nav-tabs">
+      <li class="active">
+        <a href="#business-strategy">Business</a>
+      </li>
+      <li>
+        <a href="#visitor-strategy">Visitor</a>
+      </li>
+      <li>
+        <a href="#supplier-strategy">Supplier</a>
+      </li>
+      <li>
+        <a href="#admin-strategy">Admin</a>
+      </li>
+      <li>
+        <a href="#must-haves-strategy">Must haves</a>
+      </li>
+    </ul>
+
+    <div class="tab-content">
+      <div id="business-strategy" class="tab-pane active">
+        <%= erb :ux_strategy_busines %>
       </div>
 
-      <div class="col-md-6">
-        <b>The barriers to The Knot's business goals include:</b>
-        <ul>
-          <li>Supplier churn</li>
-          <li>Meeting supplier expectation for leads</li>
-          <li>Brand perception (brides, photographers, suppliers)</li>
-          <li>Declining advertising CPM</li>
-        </ul>
+      <div id="visitor-strategy" class="tab-pane">
+        <%= erb :ux_strategy_visitor %>
       </div>
-    </section>
 
-    <hr>
+      <div id="supplier-strategy" class="tab-pane">
+        <%= erb :ux_strategy_supplier %>
+      </div>
 
-    <section>
-      <h3>Visitor/user goals</h3>
-      <ul>
-        <li>
-          <b>Primary: </b>Visitors/users of The Knot primarily want to be inspired for their wedding. This is difficult due to the cluttered presentation of information on the site.
-        </li>
-        <li>
-          <b>Secondary: </b>A secondary goal for visitors is to use tools to help plan their wedding. There is a parity of tools offered on competitor sites and a poor quality of tools being offered especially when compared to the intuitive products they have become used to using such as Pinterest and Instagram.
-        </li>
-      </ul>
-    </section>
-    <hr>
+      <div id="admin-strategy" class="tab-pane">
+        <%= erb :ux_strategy_admin %>
+      </div>
 
-    <section>
-      <h3>Supplier goals</h3>
-        <p>
-          Suppliers want new leads to their business. Although their budgets are small, supplier's expectations are generally high. The largest issue is that they don't see the value The Knot drives for them on an on-going basis.
-        </p>
-    </section>
-    <hr>
-
-    <section>
-      <h3>Admin goals</h3>
-      <p>
-        The primary goal of the admins is to create a positive visitor experiences as this validates supplier investment and drives new suppliers to The Knot.
-      </p>
-    </section>
-    <hr>
-
-    <section>
-      <h3>Must haves</h3>
-      <ul>
-        <li>Interoperability (desktop, mobile, tablet)</li>
-        <li>Speed (mean page load @ 1.5s)</li>
-      </ul>
-    </section>
-    <hr>
-
+      <div id="must-haves-strategy" class="tab-pane">
+        <section>
+          <h3>Must haves</h3>
+          <ul>
+            <li><b>Interoperability:</b> desktop, mobile, tablet</li>
+            <li><b>Speed: </b>median page load @ 1.5s (currently 7,2 s), median 95th percentile page load @ 3s.</li>
+          </ul>
+        </section>
+        <hr>
+      </div>
+    </div>
   </div>
 </article>

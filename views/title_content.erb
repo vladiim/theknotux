@@ -33,7 +33,7 @@
         </div>
       </div>
 
-      <% url = (title_content.fetch(:content_type) == 'Suppliers') ? "/suppliers/listings/#{title_content.fetch(:title).to_url}" : "/inspiration/#{title_content.fetch(:title).to_url}" %>
+      <% url = (title_content.fetch(:content_type) == 'Suppliers') ? "/suppliers/listings/#{title_content.fetch(:title).to_url}" : "/content/#{title_content.fetch(:title).to_url}" %>
 
       <p><a href="<%= url %>" class="btn btn-primary btn-lg" role="button" style="width:100%">
         <%= title_content.fetch(:cta) %>

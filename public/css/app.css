@@ -454,3 +454,11 @@ header.project {
 .left-border.add-height {
   height: 330px;
 }
+
+.strategy {
+  margin-bottom: 50px;
+}
+
+.strategy .tab-pane {
+  padding: 0 0 0 40px;
+}
